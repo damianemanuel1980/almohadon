@@ -199,26 +199,83 @@
     display: flex;
     justify-content: center;
   }
+  .benefit-emotions {
+    background-color: #fff5f7;
+    padding: 2rem;
+    text-align: center;
+  }
+  .benefit-emotions ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .benefit-emotions li {
+    font-size: 1.1rem;
+    margin: 0.75rem 0;
+  }
+  .faq {
+    padding: 2rem;
+    background-color: #fefefe;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .faq-item {
+    margin-bottom: 1rem;
+  }
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    text-align: left;
+    color: #333;
+    cursor: pointer;
+  }
+  .faq-answer {
+    display: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: #444;
+  }
+  .faq-question.active + .faq-answer {
+    display: block;
+  }
+  .faq-question .arrow {
+    transition: transform 0.3s ease;
+    font-size: 0.9rem;
+  }
+  .faq-question.active .arrow {
+    transform: rotate(180deg);
+  }
 </style>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoImaginArte - Almohada Maternal</title>
 </head>
 <body>
   <header>
-    <h1>El descanso que merecés en cada etapa del embarazo</h1>
-    <h2 class="subheadline">Almohada Maternal Confort con <strong>diseño ergonómico</strong> y <strong>telas hipoalergénicas</strong></h2>
-    <img src="portada.png" alt="Imagen de portada principal" style="display: block; max-width: 900px; width: 100%; margin: 1.5rem auto; border-radius: 1rem;">
-    
-    <form class="cta-form" action="#" method="POST">
-      <input type="email" name="email" placeholder="Ingresá tu mail para recibir info" required>
-      <button type="submit" aria-label="Enviar dirección de correo electrónico">Lo quiero</button>
-    </form>
-    <section class="product">
-  <img src="plano panza pijama.png" alt="Almohada Maternal Confort" width="400" height="400" loading="lazy">
+  <h1>El descanso que merecés en cada etapa del embarazo</h1>
+  <h2 class="subheadline">Almohada Maternal Confort con <strong>diseño ergonómico</strong> y <strong>telas hipoalergénicas</strong></h2>
+<div style="width: 100px; height: 4px; background-color: var(--primary); margin: 0 auto 1.5rem; border-radius: 2px;"></div>
+</header>
+<img src="https://images.unsplash.com/photo-1615751072473-2f9f0ee17aa7?auto=format&fit=crop&w=1200&q=80" alt="Imagen de portada principal" style="display: block; max-width: 900px; width: 100%; margin: 1.5rem auto; border-radius: 1rem;">
+
+  <form class="cta-form" action="https://script.google.com/macros/s/AKfycbzFTC2HAY51-GtYkcPwdW17SHoF_8Me-mlAmFlnEHf0L_3-tbh-rx-cRR-jJ6ZEfL9ySA/exec" method="POST" onsubmit="handleFormSubmit(event)">
+    <input type="email" name="email" placeholder="Ingresá tu mail para recibir info" required>
+    <button type="submit" aria-label="Enviar dirección de correo electrónico">Lo quiero</button>
+  </form>
+  <p id="form-success" style="display:none; text-align:center; color: var(--primary); font-weight: 600; margin-top: 1rem;">¡Gracias! Te contactaremos pronto.</p>
+</header>
+
+<section class="product">
+  <img src="plano de lado.png" alt="Vista lateral de la almohada maternal" width="400" height="400" loading="lazy">
   <div class="product-info">
     <h2>Diseño ergonómico pensado para tu bienestar</h2>
     <p>Con su forma de doble soporte, esta almohada alivia el peso del vientre y la presión en la espalda. Ideal para dormir mejor durante todo el embarazo y el postparto.</p>
   </div>
-</section></header>
+</section>
 
 <section class="reasons">
   <div class="reasons-content">
@@ -232,11 +289,20 @@
     </ul>
   </div>
   <div class="reasons-image">
-    <img src="acostada de frente.png" alt="Imagen ilustrativa de los beneficios" width="400" height="300" loading="lazy">
+    <img src="acostada de frente.png" alt="Mamás usando almohada acostadas" width="400" height="300" loading="lazy">
   </div>
 </section>
 
-  <section class="chat-testimonials">
+<section class="cta-repeat" style="background-color: #ffe2e9; padding: 2rem 1rem; text-align: center;">
+  <h2 style="font-size: 1.2rem; margin-bottom: 1rem;">¿Querés que te avisemos cuándo vuelva el stock?</h2>
+  <form class="cta-form" action="https://script.google.com/macros/s/AKfycbzFTC2HAY51-GtYkcPwdW17SHoF_8Me-mlAmFlnEHf0L_3-tbh-rx-cRR-jJ6ZEfL9ySA/exec" method="POST" onsubmit="handleFormSubmit(event)">
+    <input type="email" name="email" placeholder="Tu mail acá" required>
+    <button type="submit" aria-label="Enviar dirección de correo electrónico">Lo quiero</button>
+  </form>
+  <p id="form-success" style="display:none; text-align:center; color: var(--primary); font-weight: 600; margin-top: 1rem;">¡Gracias! Te contactaremos pronto.</p>
+</section>
+
+<section class="chat-testimonials">
     <h2>Mensajes reales de nuestras clientas</h2>
     <div class="chat-slider">
       <div class="chat-track">
@@ -249,7 +315,69 @@
     </div>
   </section>
 
-  <footer>
+<!-- Módulo emocional -->
+<section class="benefit-emotions">
+  <h2>Lo que vas a sentir</h2>
+  <div style="width: 100px; height: 4px; background-color: var(--primary); margin: 0 auto 1.5rem; border-radius: 2px;"></div>
+  <ul>
+    <li>🌙 Dormís de corrido sin dolor</li>
+    <li>🤰 Te sentís contenida, no apretada</li>
+    <li>💆 Alivio en la espalda, caderas y cuello</li>
+    <li>🛌 No te despertás dando vueltas</li>
+    <li>👶 También la vas a usar para amamantar</li>
+  </ul>
+</section>
+
+<!-- Módulo de preguntas frecuentes -->
+<section class="faq">
+  <h2>Preguntas frecuentes</h2>
+  <div class="faq-item">
+    <button class="faq-question">¿Sirve para todos los tamaños de panza?</button>
+    <div class="faq-answer">Sí. Su diseño flexible se adapta al cuerpo en cada etapa del embarazo.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question">¿Se puede lavar?</button>
+    <div class="faq-answer">Sí, la funda es desmontable y lavable a máquina con agua fría.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question">¿Sirve para el postparto?</button>
+    <div class="faq-answer">Sí, muchas mamás la usan para dar la teta o descansar después del parto.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question">¿Es hipoalergénica?</button>
+    <div class="faq-answer">Sí. Todos los materiales fueron seleccionados para evitar irritaciones o reacciones, ideales para piel sensible.</div>
+  </div>
+</section>
+
+<footer>
     <p style="text-align: center; padding: 2rem; color: #555;">&copy; 2025 EcoImaginArte - Productos pensados para tu maternidad</p>
   </footer>
+<script>
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    const form = event.target;
+    const data = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: data
+    })
+    .then(response => {
+      if (response.ok) {
+        document.getElementById("form-success").style.display = "block";
+        form.reset();
+      } else {
+        alert("Hubo un problema. Por favor, intentá más tarde.");
+      }
+    })
+    .catch(() => alert("Error de conexión."));
+  }
+document.querySelectorAll('.faq-question').forEach(button => {
+  button.addEventListener('click', () => {
+    button.classList.toggle('active');
+    const answer = button.nextElementSibling;
+    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+  });
+});
+</script>
 </body>
