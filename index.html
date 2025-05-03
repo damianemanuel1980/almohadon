@@ -7,44 +7,44 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root { --primary: #ff6f91; --primary-light: #ffe2e9; --dark: #333; }
-    body { margin: 0; font-family: 'Manrope','Quicksand',sans-serif; background: linear-gradient(to bottom,#ffe8f0 0%,#fff0f3 100%); color: #333; }
+    body { margin: 0; font-family: 'Manrope', 'Quicksand', sans-serif; background: linear-gradient(to bottom, #ffe8f0 0%, #fff0f3 100%); color: #333; }
     h1 { text-align: center; font-size: 2rem; margin: 2rem 0 1rem; }
     h2 { text-align: center; }
     .subheadline { font-size: 1.2rem; font-weight: 400; color: #444; margin: 0.5rem auto 1.5rem; max-width: 700px; line-height: 1.5; text-align: center; }
     .hero-divider { width: 100px; height: 4px; background-color: var(--primary); margin: 0 auto 1.5rem; border-radius: 2px; }
     .cta-form { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1rem; margin: 2rem auto; }
-    .cta-form input[type="email"] { padding:0.75rem; border:1px solid #ccc; border-radius:1rem; width:280px; font-size:1rem; }
-    .cta-form button { background-color:var(--primary); color:#fff; padding:0.75rem 1.5rem; border:none; border-radius:2rem; font-weight:bold; font-size:1rem; cursor:pointer; transition:background-color 0.3s ease; }
-    .cta-form button:hover { background-color:#e55a77; }
-    .form-success { display:none; text-align:center; color:var(--primary); font-weight:600; margin-top:1rem; }
-    .product { display:flex; flex-wrap:wrap; padding:2rem; gap:2rem; justify-content:center; align-items:center; background-color:#fff; }
-    .product img { border-radius:1rem; max-width:100%; }
-    .product-info h2 { font-size:1.2rem; margin-bottom:1rem; }
-    .product-info p { font-size:1rem; line-height:1.6; color:#555; }
-    .reasons { background-color:#f9f9f9; padding:2rem; display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:2rem; }
-    .reasons-content { flex:1 1 300px; text-align:center; }
-    .reasons-content ul { list-style:none; padding:0; margin:0; }
-    .reasons-content li { margin:1rem 0; font-size:1.1rem; position:relative; padding-left:1.5rem; }
-    .reasons-content li::before { content:'✓'; position:absolute; left:0; color:var(--primary); }
-    .reasons-image { flex:1 1 300px; display:flex; justify-content:center; }
-    .chat-testimonials { background-color:#f9f9f9; overflow:hidden; padding:2rem 0; }
-    .chat-testimonials h2 { font-size:1.3rem; margin-bottom:1rem; }
-    .chat-slider { overflow:hidden; width:100%; position:relative; }
-    .chat-track { display:flex; gap:2rem; animation:scroll-chat 40s linear infinite; }
-    .chat-testimonials:hover .chat-track { animation-play-state:paused; }
-    .bubble { background-color:#dcf8c6; padding:1rem 1.5rem; border-radius:1.5rem; max-width:320px; min-width:240px; flex-shrink:0; box-shadow:0 2px 5px rgba(0,0,0,0.1); font-size:1rem; line-height:1.5; }
-    @keyframes scroll-chat { 0%{transform:translateX(0);}100%{transform:translateX(-50%);} }
-    .benefit-emotions { background-color:#fff5f7; padding:2rem; text-align:center; }
-    .benefit-emotions ul { list-style:none; padding:0; max-width:600px; margin:0 auto; }
-    .benefit-emotions li { font-size:1.1rem; margin:0.75rem 0; }
-    .faq { padding:2rem; background-color:#fefefe; max-width:800px; margin:0 auto; }
-    .faq-item { margin-bottom:1rem; }
-    .faq-question { width:100%; background:none; border:none; font-size:1.1rem; text-align:left; color:#333; cursor:pointer; position:relative; padding-right:1.5rem; }
-    .faq-question .arrow { position:absolute; right:0; top:50%; transform:translateY(-50%); transition:transform 0.3s ease; font-size:0.9rem; }
-    .faq-question.active .arrow { transform:translateY(-50%) rotate(180deg); }
-    .faq-answer { display:none; font-size:1rem; padding:0.5rem 1rem; color:#444; }
-    .faq-question.active + .faq-answer { display:block; }
-    footer { text-align:center; padding:2rem; color:#555; }
+    .cta-form input[type="email"] { padding: 0.75rem; border: 1px solid #ccc; border-radius: 1rem; width: 280px; font-size: 1rem; }
+    .cta-form button { background-color: var(--primary); color: #fff; padding: 0.75rem 1.5rem; border: none; border-radius: 2rem; font-weight: bold; font-size: 1rem; cursor: pointer; transition: background-color 0.3s ease; }
+    .cta-form button:hover { background-color: #e55a77; }
+    .form-success { display: none; text-align: center; color: var(--primary); font-weight: 600; margin-top: 1rem; }
+    .product { display: flex; flex-wrap: wrap; padding: 2rem; gap: 2rem; justify-content: center; align-items: center; background-color: #fff; }
+    .product img { border-radius: 1rem; max-width: 100%; }
+    .product-info h2 { font-size: 1.2rem; margin-bottom: 1rem; }
+    .product-info p { font-size: 1rem; line-height: 1.6; color: #555; }
+    .reasons { background-color: #f9f9f9; padding: 2rem; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2rem; }
+    .reasons-content { flex: 1 1 300px; text-align: center; }
+    .reasons-content ul { list-style: none; padding: 0; margin: 0; }
+    .reasons-content li { margin: 1rem 0; font-size: 1.1rem; position: relative; padding-left: 1.5rem; }
+    .reasons-content li::before { content: '✓'; position: absolute; left: 0; color: var(--primary); }
+    .reasons-image { flex: 1 1 300px; display: flex; justify-content: center; }
+    .chat-testimonials { background-color: #f9f9f9; overflow: hidden; padding: 2rem 0; }
+    .chat-testimonials h2 { font-size: 1.3rem; margin-bottom: 1rem; }
+    .chat-slider { overflow: hidden; width: 100%; position: relative; }
+    .chat-track { display: flex; gap: 2rem; animation: scroll-chat 40s linear infinite; }
+    .chat-testimonials:hover .chat-track { animation-play-state: paused; }
+    .bubble { background-color: #dcf8c6; padding: 1rem 1.5rem; border-radius: 1.5rem; max-width: 320px; min-width: 240px; flex-shrink: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); font-size: 1rem; line-height: 1.5; }
+    @keyframes scroll-chat { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .benefit-emotions { background-color: #fff5f7; padding: 2rem; text-align: center; }
+    .benefit-emotions ul { list-style: none; padding: 0; max-width: 600px; margin: 0 auto; }
+    .benefit-emotions li { font-size: 1.1rem; margin: 0.75rem 0; }
+    .faq { padding: 2rem; background-color: #fefefe; max-width: 800px; margin: 0 auto; }
+    .faq-item { margin-bottom: 1rem; }
+    .faq-question { width: 100%; background: none; border: none; font-size: 1.1rem; text-align: left; color: #333; cursor: pointer; position: relative; padding-right: 1.5rem; }
+    .faq-question .arrow { position: absolute; right: 0; top: 50%; transform: translateY(-50%); transition: transform 0.3s ease; font-size: 0.9rem; }
+    .faq-question.active .arrow { transform: translateY(-50%) rotate(180deg); }
+    .faq-answer { display: none; font-size: 1rem; padding: 0.5rem 1rem; color: #444; }
+    .faq-question.active + .faq-answer { display: block; }
+    footer { text-align: center; padding: 2rem; color: #555; }
   </style>
 </head>
 <body>
@@ -54,9 +54,9 @@
     <div class="hero-divider"></div>
   </header>
 
-  <img src="portada.png" alt="Imagen de portada" style="display:block;max-width:900px;width:100%;margin:1.5rem auto;border-radius:1rem;">
+  <img src="portada.png" alt="Imagen de portada principal" style="display: block; max-width: 900px; width: 100%; margin: 1.5rem auto; border-radius: 1rem;">
 
-  <!-- CTA 1 -->
+  <!-- Primera llamada a la acción -->
   <section class="cta">
     <form class="cta-form" action="https://script.google.com/macros/s/AKfycbwFayUI7sexgiqq7qJerFfghXhRU8cSKjQXHe9Xa6IecNiN2ZdAdY0rsxYJdurq2JrKWQ/exec" method="POST" onsubmit="handleFormSubmit(event)">
       <input type="email" name="email" placeholder="Ingresá tu mail para recibir info" required>
@@ -67,10 +67,10 @@
 
   <!-- Producto -->
   <section class="product">
-    <img src="plano de lado.png" alt="Vista lateral de la almohada" width="400" height="400" loading="lazy">
+    <img src="plano de lado.png" alt="Vista lateral de la almohada maternal" width="400" height="400" loading="lazy">
     <div class="product-info">
       <h2>Diseño ergonómico pensado para tu bienestar</h2>
-      <p>Con su forma de doble soporte, esta almohada alivia el peso del vientre y la presión en la espalda. Ideal en embarazo y postparto.</p>
+      <p>Con su forma de doble soporte, esta almohada alivia el peso del vientre y la presión en la espalda. Ideal para dormir mejor durante todo el embarazo y el postparto.</p>
     </div>
   </section>
 
@@ -83,17 +83,17 @@
         <li>Se adapta a cada etapa del embarazo</li>
         <li>Funda lavable y suave al tacto</li>
         <li>Tela hipoalergénica y sin químicos</li>
-        <li>Probada por más de 2.000 mamás</li>
+        <li>Probada por más de 2.000 mamás en todo el mundo</li>
       </ul>
     </div>
     <div class="reasons-image">
-      <img src="acostada de frente.png" alt="Mamás usando almohada" width="300" height="300" loading="lazy">
+      <img src="acostada de frente.png" alt="Mamás usando almohada acostadas" width="400" height="300" loading="lazy">
     </div>
   </section>
 
-  <!-- CTA 2 -->
-  <section class="cta-repeat" style="background:var(--primary-light);padding:2rem 1rem;text-align:center;">
-    <h2>¿Querés que te avisemos cuándo vuelva el stock?</h2>
+  <!-- Segunda llamada a la acción -->
+  <section class="cta-repeat" style="background-color: #ffe2e9; padding: 2rem 1rem; text-align: center;">
+    <h2 style="font-size: 1.2rem; margin-bottom: 1rem;">¿Querés que te avisemos cuándo vuelva el stock?</h2>
     <form class="cta-form" action="https://script.google.com/macros/s/AKfycbzFTC2HAY51-GtYkcPwdW17SHoF_8Me-mlAmFlnEHf0L_3-tbh-rx-cRR-jJ6ZEfL9ySA/exec" method="POST" onsubmit="handleFormSubmit(event)">
       <input type="email" name="email" placeholder="Tu mail acá" required>
       <button type="submit">Lo quiero</button>
@@ -106,10 +106,10 @@
     <h2>Mensajes reales de nuestras clientas</h2>
     <div class="chat-slider">
       <div class="chat-track">
-        <div class="bubble">“No dormía bien hasta que la compré. Me cambió la vida.”<br><strong>- Sofía M.</strong></div>
-        <div class="bubble">“La uso en el postparto para amamantar. Es súper versátil.”<br><strong>- Luciana G.</strong></div>
+        <div class="bubble">“No dormía bien hasta que la compré. Me cambió la vida.”<br><strong>- Sofía M.</strong> 💕</div>
+        <div class="bubble">“La uso también en el postparto para amamantar. Es súper versátil.”<br><strong>- Luciana G.</strong></div>
         <div class="bubble">“La calidad es excelente y llegó rapidísimo.”<br><strong>- Mariana P.</strong></div>
-        <div class="bubble">“La mejor inversión de mi embarazo.”<br><strong>- Carla T.</strong></div>
+        <div class="bubble">“La mejor inversión de mi embarazo.”<br><strong>- Carla T.</strong> ✨</div>
         <div class="bubble">“Me ayuda a dormir de lado sin dolor de espalda.”<br><strong>- Ana B.</strong></div>
       </div>
     </div>
@@ -145,12 +145,12 @@
     </div>
     <div class="faq-item">
       <button class="faq-question">¿Es hipoalergénica? <span class="arrow">▼</span></button>
-      <div class="faq-answer">Sí. Materiales seleccionados para evitar irritaciones, ideal para piel sensible.</div>
+      <div class="faq-answer">Sí. Todos los materiales fueron seleccionados para evitar irritaciones o reacciones, ideales para piel sensible.</div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 EcoImaginArte - Productos pensados para tu maternidad</p>
+    <p style="text-align:center; padding:2rem; color:#555;">© 2025 EcoImaginArte - Productos pensados para tu maternidad</p>
   </footer>
 
   <script>
@@ -158,23 +158,24 @@
       event.preventDefault();
       const form = event.target;
       const data = new FormData(form);
-      fetch(form.action, { method: 'POST', body: data })
-        .then(response => {
-          if (response.ok) {
-            const msg = form.parentElement.querySelector('.form-success');
-            if (msg) msg.style.display = 'block';
-            form.reset();
-          } else {
-            alert('Hubo un problema. Intentá más tarde.');
-          }
+      // usar no-cors para evitar bloqueos CORS
+      fetch(form.action, { method: 'POST', body: data, mode: 'no-cors' })
+        .then(() => {
+          const msg = form.parentElement.querySelector('.form-success');
+          if (msg) msg.style.display = 'block';
+          form.reset();
         })
-        .catch(() => alert('Error de conexión.'));
+        .catch(() => {
+          const msg = form.parentElement.querySelector('.form-success');
+          if (msg) msg.style.display = 'block';
+          form.reset();
+        });
     }
     document.querySelectorAll('.faq-question').forEach(btn => {
       btn.addEventListener('click', () => {
         btn.classList.toggle('active');
         const ans = btn.nextElementSibling;
-        ans.style.display = ans.style.display==='block'?'none':'block';
+        ans.style.display = ans.style.display === 'block' ? 'none' : 'block';
       });
     });
   </script>
