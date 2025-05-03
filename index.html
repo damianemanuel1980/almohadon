@@ -1,222 +1,48 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Almohada Maternal Confort | EcoMamá</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Quicksand', sans-serif;
-      background-color: #fefefe;
-      color: #333;
-    }
-    header {
-      background-color: #fff0f3;
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-    }
-    .cta-form {
-      margin-top: 1.5rem;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .cta-form input[type="email"] {
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 1rem;
-      width: 300px;
-      font-size: 1rem;
-    }
-    .cta-form button {
-      background-color: #ff6f91;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 2rem;
-      font-weight: bold;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    .cta-confirm {
-      color: green;
-      font-weight: bold;
-      display: none;
-      margin-top: 1rem;
-    }
-    .product {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 2rem;
-      gap: 2rem;
-      justify-content: center;
-      align-items: center;
-    }
-    .product img {
-      max-width: 400px;
-      border-radius: 1rem;
-    }
-    .product-info {
-      max-width: 500px;
-    }
-    .product-info h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    .reasons {
-      background-color: #f9f9f9;
-      padding: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-    .reasons-content {
-      flex: 1 1 300px;
-    }
-    .reasons-image {
-      flex: 1 1 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .reasons-image img {
-      max-width: 100%;
-      border-radius: 1rem;
-    }
-    .reasons ul {
-      list-style: none;
-      padding: 0;
-    }
-    .reasons li {
-      margin-bottom: 1rem;
-      padding-left: 1rem;
-      position: relative;
-    }
-    .reasons li::before {
-      content: '✓';
-      color: #ff6f91;
-      position: absolute;
-      left: 0;
-    }
-    .testimonials {
-      background-color: #f9f9f9;
-      overflow: hidden;
-      white-space: nowrap;
-      position: relative;
-    }
-    .testimonials h2 {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    .testimonial-strip {
-      display: inline-block;
-      animation: scroll-left 40s linear infinite;
-    }
-    .testimonial-strip span {
-      display: inline-block;
-      margin-right: 4rem;
-      font-size: 1.3rem;
-      position: relative;
-      padding-left: 1.5rem;
-    }
-    .testimonial-strip span::before {
-      content: '❤';
-      position: absolute;
-      left: 0;
-      color: #ff6f91;
-    }
-    @keyframes scroll-left {
-      0% { transform: translateX(50%); }
-      100% { transform: translateX(-100%); }
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #ffe2e9;
-    }
-      .hero-image {
-      width: 100%;
-      height: auto;
-      margin-top: 1.5rem;
-      border-radius: 1rem;
-    }
-  </style>
-  <script>
-    function handleFormSubmit(event) {
-      event.preventDefault();
-      const form = event.target;
-      const email = form.email.value;
-      fetch(form.action, {
-        method: 'POST',
-        body: new URLSearchParams({ email })
-      }).then(() => {
-        form.style.display = 'none';
-        document.getElementById('confirm').style.display = 'block';
-      });
-    }
-  </script>
-</head>
-<body>
-  <header>
-    <h1>jakuna matata</h1>
-    
-    <img src="/portada.png" alt="Imagen de cabecera principal" class="hero-image">
-    <form class="cta-form" action="https://script.google.com/macros/s/AKfycbxnYEMK5a-MLJrAxCSGIsIsI2TSOZOrtS-Pf8Y5yTQZ0jub6638XgdSbTKCPa6ndjVWbA/exec" method="POST" onsubmit="handleFormSubmit(event)">
-      <input type="email" name="email" placeholder="Ingresá tu mail para recibir info" required>
-      <button type="submit">Lo quiero</button>
-    </form>
-    <p id="confirm" class="cta-confirm">¡Gracias! Te contactaremos pronto.</p>
-  </header>
-
-  <section class="product" id="comprar">
-    <img src="almohada-maternal.jpg" alt="Almohada Maternal Confort">
-    <div class="product-info">
-      <h2>Diseño ergonómico pensado para tu bienestar</h2>
-      <p>Con su forma de doble soporte, esta almohada alivia el peso del vientre y la presión en la espalda. Ideal para dormir mejor durante todo el embarazo.</p>
-    </div>
-  </section>
-
-  <section class="reasons">
-    <div class="reasons-content">
-      <h2>5 razones para elegirnos</h2>
-      <ul>
-        <li>Diseñada por especialistas en maternidad</li>
-        <li>Se adapta a cada etapa del embarazo</li>
-        <li>Funda lavable y suave al tacto</li>
-        <li>Tela hipoalergénica y sin químicos</li>
-        <li>Probada por más de 2.000 mamás en todo el mundo</li>
-      </ul>
-    </div>
-    <div class="reasons-image">
-      <img src="imagen-razones.jpg" alt="Imagen ilustrativa de los beneficios">
-    </div>
-  </section>
-
-  <section class="testimonials">
-    <h2>Lo que dicen nuestras clientas</h2>
-    <div class="testimonial-strip">
-      <span>“No dormía bien hasta que la compré. Me cambió la vida.” — Sofía M.</span>
-      <span>“La uso también en el postparto para amamantar. Es súper versátil.” — Luciana G.</span>
-      <span>“La calidad es excelente y llegó rapidísimo.” — Mariana P.</span>
-      <span>“La mejor inversión de mi embarazo.” — Carla T.</span>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 EcoMamá - Productos pensados para tu maternidad</p>
-  </footer>
-</body>
-</html>
+<style>
+  :root {
+    --primary: #ff6f91;
+    --primary-light: #ffe2e9;
+    --dark: #333;
+  }
+  .chat-testimonials {
+    background-color: #f9f9f9;
+    overflow: hidden;
+    padding: 2rem 0;
+  }
+  .chat-testimonials h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    color: var(--dark);
+  }
+  .chat-slider {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+  .chat-track {
+    display: flex;
+    gap: 2rem;
+    animation: scroll-chat 40s linear infinite;
+    will-change: transform;
+  }
+  .chat-testimonials:hover .chat-track {
+    animation-play-state: paused;
+  }
+  .bubble {
+    background-color: #dcf8c6;
+    padding: 1rem 1.5rem;
+    border-radius: 1.5rem;
+    max-width: 320px;
+    min-width: 240px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    line-height: 1.5;
+    position: relative;
+  }
+  @keyframes scroll-chat {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>
