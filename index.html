@@ -1,3 +1,4 @@
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --primary: #ff6f91;
@@ -11,9 +12,7 @@
   }
   .chat-testimonials h2 {
     text-align: center;
-    font-size: 1.6rem;
-    margin-bottom: 2rem;
-    color: var(--dark);
+    font-size: 1.3rem;
   }
   .chat-slider {
     overflow: hidden;
@@ -45,4 +44,212 @@
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
   }
+  body {
+    margin: 0;
+    font-family: 'Manrope', 'Quicksand', sans-serif;
+    background: linear-gradient(to bottom, #ffe8f0 0%, #fff0f3 100%);
+    color: #333;
+  }
+  .subheadline {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #444;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .product {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+  }
+  .product img {
+    border-radius: 1rem;
+    max-width: 100%;
+  }
+  .product-info {
+    max-width: 500px;
+  }
+  .product-info h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .product-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  .cta-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem auto;
+  }
+  .cta-form input[type="email"] {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    width: 280px;
+    font-size: 1rem;
+  }
+  .cta-form button {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .cta-form button:hover {
+    background-color: #e55a77;
+  }
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    text-align: center;
+  }
+
+  .reasons {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    text-align: center;
+  }
+  .reasons-content ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .reasons-content li {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  .reasons-content li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+  }
+  .reasons {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .reasons-content {
+    flex: 1 1 300px;
+  }
+  .reasons-image {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+  }
+  .reasons-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .reasons-content li {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  .reasons-content li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+  }  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  .hero-content {
+    flex: 1 1 300px;
+    text-align: center;
+  }
+  .hero-image {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+  }
 </style>
+<head>
+</head>
+<body>
+  <header>
+    <h1>El descanso que merecés en cada etapa del embarazo</h1>
+    <h2 class="subheadline">Almohada Maternal Confort con <strong>diseño ergonómico</strong> y <strong>telas hipoalergénicas</strong></h2>
+    <img src="portada.png" alt="Imagen de portada principal" style="display: block; max-width: 900px; width: 100%; margin: 1.5rem auto; border-radius: 1rem;">
+    
+    <form class="cta-form" action="#" method="POST">
+      <input type="email" name="email" placeholder="Ingresá tu mail para recibir info" required>
+      <button type="submit" aria-label="Enviar dirección de correo electrónico">Lo quiero</button>
+    </form>
+    <section class="product">
+  <img src="plano panza pijama.png" alt="Almohada Maternal Confort" width="400" height="400" loading="lazy">
+  <div class="product-info">
+    <h2>Diseño ergonómico pensado para tu bienestar</h2>
+    <p>Con su forma de doble soporte, esta almohada alivia el peso del vientre y la presión en la espalda. Ideal para dormir mejor durante todo el embarazo y el postparto.</p>
+  </div>
+</section></header>
+
+<section class="reasons">
+  <div class="reasons-content">
+    <h2>5 razones para elegirnos</h2>
+    <ul>
+      <li>Diseñada por especialistas en maternidad</li>
+      <li>Se adapta a cada etapa del embarazo</li>
+      <li>Funda lavable y suave al tacto</li>
+      <li>Tela hipoalergénica y sin químicos</li>
+      <li>Probada por más de 2.000 mamás en todo el mundo</li>
+    </ul>
+  </div>
+  <div class="reasons-image">
+    <img src="acostada de frente.png" alt="Imagen ilustrativa de los beneficios" width="400" height="300" loading="lazy">
+  </div>
+</section>
+
+  <section class="chat-testimonials">
+    <h2>Mensajes reales de nuestras clientas</h2>
+    <div class="chat-slider">
+      <div class="chat-track">
+        <div class="bubble">“No dormía bien hasta que la compré. Me cambió la vida.”<br><strong>- Sofía M.</strong> 💕</div>
+        <div class="bubble">“La uso también en el postparto para amamantar. Es súper versátil.”<br><strong>- Luciana G.</strong></div>
+        <div class="bubble">“La calidad es excelente y llegó rapidísimo.”<br><strong>- Mariana P.</strong></div>
+        <div class="bubble">“La mejor inversión de mi embarazo.”<br><strong>- Carla T.</strong> ✨</div>
+        <div class="bubble">“Me ayuda a dormir de lado sin dolor de espalda.”<br><strong>- Ana B.</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p style="text-align: center; padding: 2rem; color: #555;">&copy; 2025 EcoImaginArte - Productos pensados para tu maternidad</p>
+  </footer>
+</body>
