@@ -266,7 +266,7 @@
     <input type="email" name="email" placeholder="Ingresá tu mail para recibir info" required>
     <button type="submit" aria-label="Enviar dirección de correo electrónico">Lo quiero</button>
   </form>
-  <p id="form-success" style="display:none; text-align:center; color: var(--primary); font-weight: 600; margin-top: 1rem;">¡Gracias! Te contactaremos pronto.</p>
+  <p class="form-success" style="display:none; text-align:center; color: var(--primary); font-weight: 600; margin-top: 1rem;">¡Gracias! Te contactaremos pronto.</p>
 </header>
 
 <section class="product">
@@ -364,7 +364,8 @@
     })
     .then(response => {
       if (response.ok) {
-        document.getElementById("form-success").style.display = "block";
+        const successMsg = form.parentElement.querySelector('.form-success');
+        if (successMsg) successMsg.style.display = "block";
         form.reset();
       } else {
         alert("Hubo un problema. Por favor, intentá más tarde.");
