@@ -1,308 +1,291 @@
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --primary: #ff6f91;
-    --primary-light: #ffe2e9;
-    --dark: #333;
-  }
-  .chat-testimonials {
-    background-color: #f9f9f9;
-    overflow: hidden;
-    padding: 2rem 0;
-  }
-  .chat-testimonials h2 {
-    text-align: center;
-    font-size: 1.3rem;
-  }
-  .chat-slider {
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-  }
-  .chat-track {
-    display: flex;
-    gap: 2rem;
-    animation: scroll-chat 40s linear infinite;
-    will-change: transform;
-  }
-  .chat-testimonials:hover .chat-track {
-    animation-play-state: paused;
-  }
-  .bubble {
-    background-color: #dcf8c6;
-    padding: 1rem 1.5rem;
-    border-radius: 1.5rem;
-    max-width: 320px;
-    min-width: 240px;
-    flex-shrink: 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    font-size: 1rem;
-    line-height: 1.5;
-    position: relative;
-  }
-  @keyframes scroll-chat {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  body {
-    margin: 0;
-    font-family: 'Manrope', 'Quicksand', sans-serif;
-    background: linear-gradient(to bottom, #ffe8f0 0%, #fff0f3 100%);
-    color: #333;
-  }
-  .subheadline {
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: #444;
-    margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.5;
-    text-align: center;
-  }
-  .product {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 2rem;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-  }
-  .product img {
-    border-radius: 1rem;
-    max-width: 100%;
-  }
-  .product-info {
-    max-width: 500px;
-  }
-  .product-info h2 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-  .product-info p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-  }
-  .cta-form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin: 2rem auto;
-  }
-  .cta-form input[type="email"] {
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 1rem;
-    width: 280px;
-    font-size: 1rem;
-  }
-  .cta-form button {
-    background-color: var(--primary);
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 2rem;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  .cta-form button:hover {
-    background-color: #e55a77;
-  }
-  h1 {
-    text-align: center;
-    font-size: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
-  h2 {
-    text-align: center;
-  }
-
-  .reasons {
-    background-color: #f9f9f9;
-    padding: 2rem;
-    text-align: center;
-  }
-  .reasons-content ul {
-    list-style: none;
-    padding: 0;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  .reasons-content li {
-    margin: 1rem 0;
-    font-size: 1.1rem;
-    position: relative;
-    padding-left: 1.5rem;
-  }
-  .reasons-content li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--primary);
-  }
-  .reasons {
-    background-color: #f9f9f9;
-    padding: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-  }
-  .reasons-content {
-    flex: 1 1 300px;
-  }
-  .reasons-image {
-    flex: 1 1 300px;
-    display: flex;
-    justify-content: center;
-  }
-  .reasons-content ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .reasons-content li {
-    margin: 1rem 0;
-    font-size: 1.1rem;
-    position: relative;
-    padding-left: 1.5rem;
-  }
-  .reasons-content li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--primary);
-  }  .hero {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
-  }
-  .hero-content {
-    flex: 1 1 300px;
-    text-align: center;
-  }
-  .hero-image {
-    flex: 1 1 300px;
-    display: flex;
-    justify-content: center;
-  }
-  .benefit-emotions {
-    background-color: #fff5f7;
-    padding: 2rem;
-    text-align: center;
-  }
-  .benefit-emotions ul {
-    list-style: none;
-    padding: 0;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  .benefit-emotions li {
-    font-size: 1.1rem;
-    margin: 0.75rem 0;
-  }
-  .faq {
-    padding: 2rem;
-    background-color: #fefefe;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .faq-item {
-    margin-bottom: 1rem;
-  }
-  .faq-question {
-    width: 100%;
-    background: none;
-    border: none;
-    font-size: 1.1rem;
-    text-align: left;
-    color: #333;
-    cursor: pointer;
-  }
-  .faq-answer {
-    display: none;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    color: #444;
-  }
-  .faq-question.active + .faq-answer {
-    display: block;
-  }
-  .faq-question .arrow {
-    transition: transform 0.3s ease;
-    font-size: 0.9rem;
-  }
-  .faq-question.active .arrow {
-    transform: rotate(180deg);
-  }
-</style>
+<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EcoImaginArte - Almohada Maternal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ff6f91;
+      --primary-light: #ffe2e9;
+      --dark: #333;
+    }
+    body {
+      margin: 0;
+      font-family: 'Manrope', 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom, #ffe8f0 0%, #fff0f3 100%);
+      color: #333;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    .subheadline {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #444;
+      margin: 0.5rem auto 1.5rem;
+      max-width: 700px;
+      line-height: 1.5;
+    }
+    .hero-divider {
+      width: 100px;
+      height: 4px;
+      background-color: var(--primary);
+      margin: 0 auto 1.5rem;
+      border-radius: 2px;
+    }
+    .cta-form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin: 2rem auto;
+    }
+    .cta-form input[type="email"] {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 1rem;
+      width: 280px;
+      font-size: 1rem;
+    }
+    .cta-form button {
+      background-color: var(--primary);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 2rem;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .cta-form button:hover {
+      background-color: #e55a77;
+    }
+    .form-success {
+      display: none;
+      text-align: center;
+      color: var(--primary);
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+    .product {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+    }
+    .product img {
+      border-radius: 1rem;
+      max-width: 100%;
+    }
+    .product-info h2 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .product-info p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+    .reasons {
+      background-color: #f9f9f9;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      text-align: center;
+    }
+    .reasons-content {
+      flex: 1 1 300px;
+    }
+    .reasons-content ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .reasons-content li {
+      margin: 1rem 0;
+      font-size: 1.1rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    .reasons-content li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+    }
+    .reasons-image {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+    }
+    .chat-testimonials {
+      background-color: #f9f9f9;
+      overflow: hidden;
+      padding: 2rem 0;
+    }
+    .chat-testimonials h2 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    .chat-slider {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+    }
+    .chat-track {
+      display: flex;
+      gap: 2rem;
+      animation: scroll-chat 40s linear infinite;
+      will-change: transform;
+    }
+    .chat-testimonials:hover .chat-track {
+      animation-play-state: paused;
+    }
+    .bubble {
+      background-color: #dcf8c6;
+      padding: 1rem 1.5rem;
+      border-radius: 1.5rem;
+      max-width: 320px;
+      min-width: 240px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      font-size: 1rem;
+      line-height: 1.5;
+      position: relative;
+    }
+    @keyframes scroll-chat {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .benefit-emotions {
+      background-color: #fff5f7;
+      padding: 2rem;
+      text-align: center;
+    }
+    .benefit-emotions ul {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .benefit-emotions li {
+      font-size: 1.1rem;
+      margin: 0.75rem 0;
+    }
+    .faq {
+      padding: 2rem;
+      background-color: #fefefe;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      margin-bottom: 1rem;
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      font-size: 1.1rem;
+      text-align: left;
+      color: #333;
+      cursor: pointer;
+      position: relative;
+      padding-right: 1.5rem;
+    }
+    .faq-question .arrow {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.3s ease;
+      font-size: 0.9rem;
+    }
+    .faq-question.active .arrow {
+      transform: translateY(-50%) rotate(180deg);
+    }
+    .faq-answer {
+      display: none;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      color: #444;
+    }
+    .faq-question.active + .faq-answer {
+      display: block;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-  <h1>El descanso que merecés en cada etapa del embarazo</h1>
-  <h2 class="subheadline">Almohada Maternal Confort con <strong>diseño ergonómico</strong> y <strong>telas hipoalergénicas</strong></h2>
-<div style="width: 100px; height: 4px; background-color: var(--primary); margin: 0 auto 1.5rem; border-radius: 2px;"></div>
-</header>
-<img src="portada.png" alt="Imagen de portada principal" style="display: block; max-width: 900px; width: 100%; margin: 1.5rem auto; border-radius: 1rem;">
+    <h1>El descanso que merecés en cada etapa del embarazo</h1>
+    <h2 class="subheadline">
+      Almohada Maternal Confort con <strong>diseño ergonómico</strong> y <strong>telas hipoalergénicas</strong>
+    </h2>
+    <div class="hero-divider"></div>
+  </header>
 
-  <form class="cta-form" action="https://script.google.com/macros/s/AKfycbwFayUI7sexgiqq7qJerFfghXhRU8cSKjQXHe9Xa6IecNiN2ZdAdY0rsxYJdurq2JrKWQ/exec" method="POST" onsubmit="handleFormSubmit(event)">
-    <input type="email" name="email" placeholder="Ingresá tu mail para recibir info" required>
-    <button type="submit" aria-label="Enviar dirección de correo electrónico">Lo quiero</button>
-  </form>
-  <p class="form-success" style="display:none; text-align:center; color: var(--primary); font-weight: 600; margin-top: 1rem;">¡Gracias! Te contactaremos pronto.</p>
-</header>
+  <img src="portada.png" alt="Imagen de portada principal" style="display: block; max-width: 900px; width: 100%; margin: 1.5rem auto; border-radius: 1rem;">
 
-<section class="product">
-  <img src="plano de lado.png" alt="Vista lateral de la almohada maternal" width="400" height="400" loading="lazy">
-  <div class="product-info">
-    <h2>Diseño ergonómico pensado para tu bienestar</h2>
-    <p>Con su forma de doble soporte, esta almohada alivia el peso del vientre y la presión en la espalda. Ideal para dormir mejor durante todo el embarazo y el postparto.</p>
-  </div>
-</section>
+  <!-- Primera llamada a la acción -->
+  <section class="cta">
+    <form class="cta-form" action="https://script.google.com/macros/s/AKfycbwFayUI7sexgiqq7qJerFfghXhRU8cSKjQXHe9Xa6IecNiN2ZdAdY0rsxYJdurq2JrKWQ/exec" method="POST" onsubmit="handleFormSubmit(event)">
+      <input type="email" name="email" placeholder="Ingresá tu mail para recibir info" required>
+      <button type="submit" aria-label="Enviar dirección de correo electrónico">Lo quiero</button>
+    </form>
+    <p class="form-success">¡Gracias! Te contactaremos pronto.</p>
+  </section>
 
-<section class="reasons">
-  <div class="reasons-content">
-    <h2>5 razones para elegirnos</h2>
-    <ul>
-      <li>Diseñada por especialistas en maternidad</li>
-      <li>Se adapta a cada etapa del embarazo</li>
-      <li>Funda lavable y suave al tacto</li>
-      <li>Tela hipoalergénica y sin químicos</li>
-      <li>Probada por más de 2.000 mamás en todo el mundo</li>
-    </ul>
-  </div>
-  <div class="reasons-image">
-    <img src="acostada de frente.png" alt="Mamás usando almohada acostadas" width="400" height="300" loading="lazy">
-  </div>
-</section>
+  
+  <section class="product">
+    <img src="plano de lado.png" alt="Vista lateral de la almohada maternal" width="400" height="400" loading="lazy">
+    <div class="product-info">
+      <h2>Diseño ergonómico pensado para tu bienestar</h2>
+      <p>Con su forma de doble soporte, esta almohada alivia el peso del vientre y la presión en la espalda. Ideal para dormir mejor durante todo el embarazo y el postparto.</p>
+    </div>
+  </section>
 
-<section class="cta-repeat" style="background-color: #ffe2e9; padding: 2rem 1rem; text-align: center;">
-  <h2 style="font-size: 1.2rem; margin-bottom: 1rem;">¿Querés que te avisemos cuándo vuelva el stock?</h2>
-  <form class="cta-form" action="https://script.google.com/macros/s/AKfycbzFTC2HAY51-GtYkcPwdW17SHoF_8Me-mlAmFlnEHf0L_3-tbh-rx-cRR-jJ6ZEfL9ySA/exec" method="POST" onsubmit="handleFormSubmit(event)">
-    <input type="email" name="email" placeholder="Tu mail acá" required>
-    <button type="submit" aria-label="Enviar dirección de correo electrónico">Lo quiero</button>
-  </form>
-  <p id="form-success" style="display:none; text-align:center; color: var(--primary); font-weight: 600; margin-top: 1rem;">¡Gracias! Te contactaremos pronto.</p>
-</section>
+  <section class="reasons">
+    <div class="reasons-content">
+      <h2>5 razones para elegirnos</h2>
+      <ul>
+        <li>Diseñada por especialistas en maternidad</li>
+        <li>Se adapta a cada etapa del embarazo</li>
+        <li>Funda lavable y suave al tacto</li>
+        <li>Tela hipoalergénica y sin químicos</li>
+        <li>Probada por más de 2.000 mamás en todo el mundo</li>
+      </ul>
+    </div>
+    <div class="reasons-image">
+      <img src="plano de lado.png" alt="Mamás usando almohada acostadas" width="400" height="300" loading="lazy">
+    </div>
+  </section>
 
-<section class="chat-testimonials">
+  <!-- Segunda llamada a la acción -->
+  <section class="cta-repeat" style="background-color: #ffe2e9; padding: 2rem 1rem; text-align: center;">
+    <h2 style="font-size: 1.2rem; margin-bottom: 1rem;">¿Querés que te avisemos cuándo vuelva el stock?</h2>
+    <form class="cta-form" action="https://script.google.com/macros/s/AKfycbzFTC2HAY51-GtYkcPwdW17SHoF_8Me-mlAmFlnEHf0L_3-tbh-rx-cRR-jJ6ZEfL9ySA/exec" method="POST" onsubmit="handleFormSubmit(event)">
+      <input type="email" name="email" placeholder="Tu mail acá" required>
+      <button type="submit" aria-label="Enviar dirección de correo electrónico">Lo quiero</button>
+    </form>
+    <p class="form-success">¡Gracias! Te contactaremos pronto.</p>
+  </section>
+
+  <section class="chat-testimonials">
     <h2>Mensajes reales de nuestras clientas</h2>
     <div class="chat-slider">
       <div class="chat-track">
@@ -315,70 +298,71 @@
     </div>
   </section>
 
-<!-- Módulo emocional -->
-<section class="benefit-emotions">
-  <h2>Lo que vas a sentir</h2>
-  <div style="width: 100px; height: 4px; background-color: var(--primary); margin: 0 auto 1.5rem; border-radius: 2px;"></div>
-  <ul>
-    <li>🌙 Dormís de corrido sin dolor</li>
-    <li>🤰 Te sentís contenida, no apretada</li>
-    <li>💆 Alivio en la espalda, caderas y cuello</li>
-    <li>🛌 No te despertás dando vueltas</li>
-    <li>👶 También la vas a usar para amamantar</li>
-  </ul>
-</section>
+  <section class="benefit-emotions">
+    <h2>Lo que vas a sentir</h2>
+    <div class="hero-divider"></div>
+    <ul>
+      <li>🌙 Dormís de corrido sin dolor</li>
+      <li>🤰 Te sentís contenida, no apretada</li>
+      <li>💆 Alivio en la espalda, caderas y cuello</li>
+      <li>🛌 No te despertás dando vueltas</li>
+      <li>👶 También la vas a usar para amamantar</li>
+    </ul>
+  </section>
 
-<!-- Módulo de preguntas frecuentes -->
-<section class="faq">
-  <h2>Preguntas frecuentes</h2>
-  <div class="faq-item">
-    <button class="faq-question">¿Sirve para todos los tamaños de panza?</button>
-    <div class="faq-answer">Sí. Su diseño flexible se adapta al cuerpo en cada etapa del embarazo.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question">¿Se puede lavar?</button>
-    <div class="faq-answer">Sí, la funda es desmontable y lavable a máquina con agua fría.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question">¿Sirve para el postparto?</button>
-    <div class="faq-answer">Sí, muchas mamás la usan para dar la teta o descansar después del parto.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question">¿Es hipoalergénica?</button>
-    <div class="faq-answer">Sí. Todos los materiales fueron seleccionados para evitar irritaciones o reacciones, ideales para piel sensible.</div>
-  </div>
-</section>
+  <section class="faq">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq-item">
+      <button class="faq-question">¿Sirve para todos los tamaños de panza? <span class="arrow">▼</span></button>
+      <div class="faq-answer">Sí. Su diseño flexible se adapta al cuerpo en cada etapa del embarazo.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">¿Se puede lavar? <span class="arrow">▼</span></button>
+      <div class="faq-answer">Sí, la funda es desmontable y lavable a máquina con agua fría.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">¿Sirve para el postparto? <span class="arrow">▼</span></button>
+      <div class="faq-answer">Sí, muchas mamás la usan para dar la teta o descansar después del parto.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">¿Es hipoalergénica? <span class="arrow">▼</span></button>
+      <div class="faq-answer">Sí. Todos los materiales fueron seleccionados para evitar irritaciones o reacciones, ideales para piel sensible.</div>
+    </div>
+  </section>
 
-<footer>
-    <p style="text-align: center; padding: 2rem; color: #555;">&copy; 2025 EcoImaginArte - Productos pensados para tu maternidad</p>
+  <footer>
+    <p style="text-align: center; padding: 2rem; color: #555;">© 2025 EcoImaginArte - Productos pensados para tu maternidad</p>
   </footer>
-<script>
-  function handleFormSubmit(event) {
-    event.preventDefault();
-    const form = event.target;
-    const data = new FormData(form);
 
-    fetch(form.action, {
-      method: "POST",
-      body: data
-    })
-    .then(response => {
-      if (response.ok) {
-        const successMsg = form.parentElement.querySelector('.form-success');
-        if (successMsg) successMsg.style.display = "block";
-        form.reset();
-      } else {
-        alert("Hubo un problema. Por favor, intentá más tarde.");
-      }
-    })
-    .catch(() => alert("Error de conexión."));
-  }
-document.querySelectorAll('.faq-question').forEach(button => {
-  button.addEventListener('click', () => {
-    button.classList.toggle('active');
-    const answer = button.nextElementSibling;
-    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-  });
-});
-</script>
+  <script>
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const data = new FormData(form);
+
+      fetch(form.action, {
+        method: "POST",
+        body: data
+      })
+      .then(response => {
+        if (response.ok) {
+          const successMsg = form.parentElement.querySelector('.form-success');
+          if (successMsg) successMsg.style.display = 'block';
+          form.reset();
+        } else {
+          alert("Hubo un problema. Por favor, intentá más tarde.");
+        }
+      })
+      .catch(() => alert("Error de conexión."));
+    }
+
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        button.classList.toggle('active');
+        const answer = button.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
 </body>
+</html>
