@@ -154,30 +154,40 @@
   </footer>
 
   <script>
-    function handleFormSubmit(event) {
-      event.preventDefault();
-      const form = event.target;
-      const data = new FormData(form);
-      // usar no-cors para evitar bloqueos CORS
-      fetch(form.action, { method: 'POST', body: data, mode: 'no-cors' })
-        .then(() => {
-          const msg = form.parentElement.querySelector('.form-success');
-          if (msg) msg.style.display = 'block';
-          form.reset();
-        })
-        .catch(() => {
-          const msg = form.parentElement.querySelector('.form-success');
-          if (msg) msg.style.display = 'block';
-          form.reset();
-        });
-    }
-    document.querySelectorAll('.faq-question').forEach(btn => {
-      btn.addEventListener('click', () => {
-        btn.classList.toggle('active');
-        const ans = btn.nextElementSibling;
-        ans.style.display = ans.style.display === 'block' ? 'none' : 'block';
-      });
+  // Nota: Para que funcione el registro, configurá tu Apps Script con CORS:
+  // En tu doPost, devuelve JSON y pon el header 'Access-Control-Allow-Origin': '*'.
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    const form = event.target;
+    const data = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      credentials: 'omit'
+    })
+    .then(response => response.json())
+    .then(json => {
+      if (json.result === 'success') {
+        const msg = form.parentElement.querySelector('.form-success');
+        if (msg) msg.style.display = 'block';
+        form.reset();
+      } else {
+        alert('Hubo un problema en el envío.');
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      alert('Error de red o CORS.');
     });
-  </script>
+  }
+
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      const ans = btn.nextElementSibling;
+      ans.style.display = ans.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
 </body>
 </html>
